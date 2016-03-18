@@ -1,0 +1,40 @@
+@model IEnumerable<sqlite.Models.DataEventRecord>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "DataEvents";
+}
+
+<h2>Data Events</h2>
+
+
+@Html.ActionLink("Create New", "Create");
+
+<table class="Table">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>TimeStamp</th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(_=>item.Id);
+      </td>
+      <td>
+        @Html.DisplayFor(_=>item.Name);
+      </td>
+      <td>
+        @Html.DisplayFor(_=>item.Description);
+      </td>
+      <td>
+        @Html.DisplayFor(_=>item.TimeStamp);
+      </td>
+    </tr>
+  }
+</table>
