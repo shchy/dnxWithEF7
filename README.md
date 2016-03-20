@@ -1,4 +1,4 @@
-dnx ef migrations add SqliteMigrations
-dnx ef database update
-dnx web
+dnx ef migrations add SqliteMigrations  
+dnx ef database update  
+dnx web  
 
